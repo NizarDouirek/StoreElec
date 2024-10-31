@@ -1,0 +1,36 @@
+<div class="darkBack" (click)="disableSearchMode()"></div>
+<div class="search">
+    <div align="center" class="entry">
+        <input
+            #search
+            autofocus
+            (keydown)="disableSearchMode($event)"
+            type="text"
+            placeholder="Search"
+            (keydown.Enter)="addItem(search.value)">
+    </div>
+    <p class="title ms-1 mt-3" style="margin-bottom: -.8em">
+        <b>Recent</b>
+    </p>
+    <div class="list-search">
+        <ul>
+            <li *ngFor="let item of searchList, let i= index;">
+                <p>
+                    <i class="bi bi-clock-history me-4"></i>
+                    {{ item.title }}
+                </p>
+                <div>
+                    <i (click)="startToggle(i)"
+                        *ngIf="!item.isStar"
+                        class="bi bi-star me-3">
+                    </i>
+                    <i (click)="startToggle(i)"
+                        *ngIf="item.isStar"
+                        class="bi bi-star-fill me-3 text-warning">
+                    </i>
+                    <i (click)="deleteItem(i)" class="bi bi-x-lg"></i>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,113 @@
+/* *{
+    display: block;
+    margin: auto;
+} */
+
+.reduction {
+  width: 3em;
+  position: absolute;
+  right: -4px;
+  z-index: 1;
+}
+
+.reduction p {
+  font-size: 10px;
+  width: 4em;
+}
+
+.card {
+  width: 13em;
+  height: 30em;
+  min-height: 30em;
+  min-width: 13em;
+  padding: 0.35em 0.5em;
+  background-color: #f8f9fa;
+  margin: 1em;
+  margin-bottom: 4em;
+  border: 0.2px solid rgb(238, 238, 238);
+}
+
+.img img {
+  width: 100%;
+  height: 13em;
+  position: relative;
+  top: 0;
+  border-radius: 0.3em;
+  box-shadow: 0 0 0 0 transparent;
+  transition: top 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover img {
+  top: -3em;
+  box-shadow: 0 10px 10px 0 rgb(133, 133, 133);
+}
+
+.img img {
+  width: 100%;
+  height: 13em;
+  position: relative;
+  cursor: pointer;
+}
+
+.read_more {
+  background-color: black;
+  color: white;
+  border-radius: 5em;
+  border: none;
+  padding: 0.5em 1.2em;
+  position: relative;
+  --height: 3.3em;
+  height: 2.5em;
+  top: calc(var(--height) / -2);
+  box-shadow: 0 15px 10px 0 rgb(133, 133, 133);
+  transition: box-shadow 0.2s ease;
+}
+
+.card:hover .read_more {
+  box-shadow: 0 0 0 0 transparent;
+}
+
+.body {
+  text-align: center;
+  font-weight: bold;
+  font-family: serif;
+}
+
+.body hr {
+  width: calc(100% - 1em);
+}
+
+.body p {
+  padding-top: 0.3em;
+  padding-bottom: 1em;
+  color: rgb(85, 85, 85);
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding-block: 0.8em;
+}
+
+.footer button {
+  border: 1px solid;
+  border-radius: 50%;
+  margin-inline: 0.1em;
+  background-color: transparent;
+  color: black;
+  transition: color 0.2s ease, background-color 0.1s ease;
+}
+
+.footer button:hover {
+  background-color: lightgray;
+  border-color: rgb(182, 182, 182);
+}
+.footer button:active {
+  background-color: lightgray;
+  color: gray;
+  border-color: rgb(70, 70, 70);
+}
+
+.footer .buttons {
+  display: flex;
+}

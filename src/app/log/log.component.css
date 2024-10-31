@@ -1,0 +1,14 @@
+*{
+    display: flex;
+    justify-content: center;
+}
+
+.backImage {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 0;
+    background-image: url("../../assets/images/arr.png");
+    background-size: 100% 100%;
+    background-position: center;
+}

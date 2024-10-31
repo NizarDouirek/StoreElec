@@ -1,0 +1,74 @@
+.list-save {
+  width: 100%;
+  color: white;
+  position: absolute;
+  width: 20em;
+  right: 1.5em;
+  animation: saveIn 0.2s ease;
+  z-index: 4;
+  /* height: 12.7em; */
+  /* height: 14em; */
+  /* overflow-y: scroll; */
+}
+
+@media (max-width: 930px) {
+  .list-save {
+    right: 10em;
+  }
+}
+
+@keyframes saveIn {
+  from {
+    top: -6em;
+  }
+
+  to {
+    top: 4em;
+  }
+}
+
+.saveOut {
+  animation: saveOut 0.2s ease;
+}
+
+@keyframes saveOut {
+  from {
+    top: 3.3em;
+  }
+
+  to {
+    top: -8em;
+  }
+}
+
+.list-panier ul {
+  list-style-type: none;
+  margin-top: 1em;
+}
+
+.list-save ul li {
+  padding: 0.8em;
+  padding-inline: 1.5em;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 0.1px solid;
+  cursor: pointer;
+}
+
+.list-save ul li:not(:last-child) {
+  border-bottom: none;
+}
+
+.list-save ul li:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.list-save ul li i:not(i[class*="bi-clock"]) {
+  cursor: pointer;
+}
+
+.entry input:focus {
+  background: rgba(0, 0, 0, 0.521);
+  color: white;
+}

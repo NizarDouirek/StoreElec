@@ -1,0 +1,78 @@
+.body {
+  width: 60em;
+  display: block;
+  margin: auto;
+  margin-block: auto;
+}
+
+h3 {
+  color: white;
+  font-family: Geneva, sans-serif;
+  background-color: rgb(23, 23, 85);
+  width: fit-content;
+  padding: 0.3em 0.8em;
+  border-radius: 5px;
+  margin-bottom: 0.7em;
+  /* margin: auto; */
+}
+
+.form-group {
+  /* background-color: red; */
+  /* margin: 0.3em 1em; */
+}
+
+form {
+  background-color: rgba(230, 230, 230, 0.747);
+  /* padding: 2em 5em; */
+  padding-block: 3em;
+  padding-inline: 4em;
+  margin-top: 4em;
+  border-radius: 5px;
+}
+
+input {
+  border: 2px solid lightblue;
+  padding: 0.3em 0.7em;
+  outline: none;
+}
+
+input[class="w"] {
+  width: 7em;
+}
+
+input:focus {
+}
+
+label {
+  color: #555;
+}
+
+button {
+  font-size: large;
+  font-family: tahoma, sans-serif;
+  border: none;
+}
+
+button:first-child {
+  background-color: rgb(23, 23, 85);
+  width: 72%;
+}
+
+button:first-child:hover {
+  background-color: rgb(33, 33, 119);
+}
+
+button:first-child:focus:active {
+  background-color: rgb(30, 30, 141);
+}
+
+@media (max-width: 991px) {
+  .body {
+    width: 30em;
+  }
+
+  button:first-child {
+    width: fit-content;
+    padding-inline: 2em;
+  }
+}

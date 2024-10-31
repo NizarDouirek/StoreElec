@@ -1,0 +1,35 @@
+.titre {
+  font-size: 100px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background: linear-gradient(to right, #293ba0, #f76767);
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 3em 10em;
+}
+
+@media (max-width: 1500px) {
+  .titre {
+    font-size: 80px;
+  }
+}
+
+@media (max-width: 1300px) {
+  .titre {
+    font-size: 60px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .titre {
+    font-size: 40px;
+  }
+}

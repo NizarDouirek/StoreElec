@@ -1,0 +1,63 @@
+* {
+  margin-top: 10px;
+}
+
+.section1 p {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: large;
+}
+.section1 img {
+  border-radius: 5%;
+}
+
+.section1:first-child {
+  display: flex;
+}
+
+.image {
+  display: flex;
+  justify-content: space-around;
+}
+.image1 {
+  display: flex;
+  justify-content: space-around;
+}
+.image2 {
+  display: flex;
+  justify-content: space-around;
+}
+.image3 {
+  display: flex;
+  justify-content: space-around;
+}
+.image4 {
+  display: flex;
+  justify-content: space-around;
+}
+
+h1 {
+  position: relative;
+  animation: leftToRight 1s ease;
+}
+h2 {
+  position: relative;
+  animation: rightToLeft 1s ease;
+}
+
+@keyframes leftToRight {
+  from {
+    left: -20em;
+  }
+  to {
+    left: 0;
+  }
+}
+
+@keyframes rightToLeft {
+  from {
+    right: -20em;
+  }
+  to {
+    right: 0;
+  }
+}

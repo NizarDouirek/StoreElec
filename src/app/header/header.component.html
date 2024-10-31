@@ -1,0 +1,220 @@
+<nav class="navbar navbar-expand bg-light">
+    <div class="container-fluid">
+        <div>
+            <img routerLink="home"
+                src="../../assets/images/electronics_store.jpg"
+                style="border-radius:50%; cursor: pointer;" width="50px"
+                alt="logo">
+            <a class="navbar-brand ms-3 " routerLink="home">StoreElec</a>
+        </div>
+        <div class="nav">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a
+                        class="nav-link"
+                        routerLinkActive="active"
+                        [routerLinkActiveOptions]="{exact: true}"
+                        routerLink="home">
+                        <i class="bi bi-house-fill"></i>
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a class="nav-link" routerLinkActive="active"
+                        routerLink="phones">
+                        <i class="bi bi-phone-fill"></i>
+                        Phones
+                    </a>
+                </li>
+                <li>
+                    <a class="nav-link" routerLinkActive="active"
+                        routerLink="laptops">
+                        <i class="bi bi-laptop"></i>
+                        Laptops
+                    </a>
+                </li>
+                <li>
+                    <a class="nav-link" routerLinkActive="active"
+                        routerLink="tablettes">
+                        <i class="bi bi-tablet"></i>
+                        Tablettes
+                    </a>
+                </li>
+                <li>
+                    <a class="nav-link" routerLinkActive="active"
+                        routerLink="smartWatch">
+                        <i class="bi bi-smartwatch"></i>
+                        Smartwatch
+                    </a>
+                </li>
+                <li>
+                    <a class="nav-link" routerLinkActive="active"
+                        routerLink="about-us">
+                        <i class="bi bi-people"></i>
+                        About Us
+                    </a>
+                </li>
+                <!-- <li>
+                    <a class="nav-link" href="">
+                        <i class="bi bi-globe"></i>
+                        All
+                    </a>
+                </li> -->
+            </ul>
+        </div>
+        <div class="dropdown">
+            <button (click)="toggleSearchMode()" type="button"
+                class="search btn btn-default
+                position-relative
+                me-2">
+                <i class="bi bi-search text-white"></i>
+            </button>
+            <button (click)="togglePanierMode()" type="button"
+                class="btn
+                btn-warning position-relative
+                me-2">
+                <i class="bi bi-cart4 text-white"></i>
+                <span class="position-absolute top-0 start-100 translate-middle
+                    badge rounded-pill bg-danger">
+                    {{ countPanier }}
+                </span>
+            </button>
+            <button (click)="toggleSaveMode()" type="button"
+                class="btn
+                btn-success position-relative
+                me-3">
+                <i class="bi bi-bookmark-fill text-white"></i>
+                <span class="position-absolute top-0 start-100 translate-middle
+                    badge rounded-pill bg-danger">
+                    {{ countSave }}
+                </span>
+            </button>
+
+            <button class="btn btn-secondary dropdown-toggle"
+                data-bs-toggle="dropdown" type="button">
+                login
+            </button>
+            <ul class="dropdown-menu">
+                <li>
+                    <a (click)="signOrLog('login')" class="dropdown-item"
+                        routerLink="log">Login</a>
+                </li>
+                <li>
+                    <a (click)="signOrLog('singUp')" class="dropdown-item"
+                        routerLink="log">Sing Up</a>
+                </li>
+            </ul>
+        </div>
+
+
+
+
+
+        <div class="menu">
+            <button (click)="showSmWindow()" class="btn btn-secondary">
+                <i class="bi bi-list"></i>
+            </button>
+        </div>
+        <div *ngIf="smWindow" class="small-window">
+            <button (click)="toggleSearchMode()" type="button"
+                class="search btn btn-default
+                position-relative
+                me-2">
+                <i class="bi bi-search text-white"></i>
+            </button>
+            <button (click)="togglePanierMode()" type="button"
+                class="btn
+                btn-warning position-relative
+                me-2">
+                <i class="bi bi-cart4 text-white"></i>
+                <span class="position-absolute top-0 start-100 translate-middle
+                    badge rounded-pill bg-danger">
+                    {{ countPanier }}
+                </span>
+            </button>
+            <button (click)="toggleSaveMode()" type="button"
+                class="btn
+                btn-success position-relative
+                me-3">
+                <i class="bi bi-bookmark-fill text-white"></i>
+                <span class="position-absolute top-0 start-100 translate-middle
+                    badge rounded-pill bg-danger">
+                    {{ countSave }}
+                </span>
+            </button>
+            <button class="btn btn-secondary
+                dropdown-toggle"
+                type="butotn" data-bs-toggle="dropdown">
+                <i class="bi bi-box-arrow-in-right"></i>
+            </button>
+            <ul class="dropdown-menu">
+                <li>
+                    <a (click)="signOrLog('login')" class="dropdown-item"
+                        routerLink="log">Login</a>
+                </li>
+                <li>
+                    <a (click)="signOrLog('singUp')" class="dropdown-item"
+                        routerLink="log">Sing Up</a>
+                </li>
+            </ul>
+            <ul class="navbar navbar-nav">
+                <li class="nav-item">
+                    <a
+                        class="nav-link"
+                        routerLinkActive="active"
+                        [routerLinkActiveOptions]="{exact: true}"
+                        routerLink="home">
+                        <i class="bi bi-house-fill"></i>
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a class="nav-link" routerLinkActive="active"
+                        routerLink="phones">
+                        <i class="bi bi-phone-fill"></i>
+                        Phones
+                    </a>
+                </li>
+                <li>
+                    <a class="nav-link" routerLinkActive="active"
+                        routerLink="laptops">
+                        <i class="bi bi-laptop"></i>
+                        Laptops
+                    </a>
+                </li>
+                <li>
+                    <a class="nav-link" routerLinkActive="active"
+                        routerLink="tablettes">
+                        <i class="bi bi-tablet"></i>
+                        Tablettes
+                    </a>
+                </li>
+                <li>
+                    <a class="nav-link" routerLinkActive="active"
+                        routerLink="smartWatch">
+                        <i class="bi bi-smartwatch"></i>
+                        Smartwatch
+                    </a>
+                </li>
+                <!-- <li>
+                        <a class="nav-link" href="">
+                            <i class="bi bi-globe"></i>
+                            All
+                        </a>
+                    </li> -->
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<ng-container *ngIf="searchMode">
+    <app-search (disSearchModel)="toggleSearchMode()"></app-search>
+</ng-container>
+
+<ng-container *ngIf="saveMode">
+    <app-enregistre [disableSaveMode]="disSaveMode"></app-enregistre>
+</ng-container>
+
+<ng-container *ngIf="panierMode">
+    <app-panier (disPanierMode)="togglePanierMode()"></app-panier>
+</ng-container>

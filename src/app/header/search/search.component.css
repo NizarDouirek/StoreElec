@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.darkBack {
+    background:rgba(0, 0, 0, 0.3);
+    position: fixed;
+    height: 100%;
+    top: 0;
+    width: 100%;
+    z-index: 5;
+}
+
+.search {
+    --width: 35em;
+    z-index: 5;
+    width: var(--width);
+    background-image: radial-gradient(white, lightblue);
+    display: block;
+    margin: auto;
+    margin-top: 15vh;
+    padding: 1em .8em;
+    position: fixed;
+    left: calc(50% + var(--width)/-2);
+    border-radius: .5em;
+}
+
+.search .entry{
+    /* padding: 1em; */
+}
+
+.entry input {
+    width: 100%;
+    height: 2.5em;
+    border-radius: .3em;
+    border: none;
+    padding: 1em;
+    outline: none;
+    color: black;
+    transition: color .2s;
+}
+
+.search .list-search {
+    width: 100%;
+    
+    color: white;
+    /* text-align: center;     */
+}
+
+.list-search ul {
+    list-style-type: none;
+    margin-top: 1em;
+}
+
+.list-search ul li{
+    padding-block: .5em;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: .1px solid;
+}
+
+.list-search ul li:not(:last-child) {    
+    border-bottom: none;
+}
+
+.list-search ul li:Hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.list-search ul li i:not(i[class*='bi-clock']){
+    cursor: pointer;
+}
+
+.entry input:focus {
+    background: rgba(0, 0, 0, 0.521);
+    color: white;
+}

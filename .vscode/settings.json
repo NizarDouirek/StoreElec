@@ -1,0 +1,11 @@
+{
+  "editor.defaultFormatter": "SimonSiefke.prettier-vscode",
+  "files.autoSave": "afterDelay",
+  "editor.formatOnType": true,
+  "html.format.unformattedContentDelimiter": "p",
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}

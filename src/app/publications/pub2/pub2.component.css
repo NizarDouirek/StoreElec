@@ -1,0 +1,55 @@
+.content {
+  width: 20em;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  right: 0;
+  top: 15em;
+}
+
+.slide {
+  width: 20em;
+  align-self: center;
+  overflow: hidden;
+}
+
+.slide img {
+  position: relative;
+  left: 0;
+  width: 20em;
+  height: 20em;
+  animation: in 0.6s ease, out 0.6s 2.5s ease;
+}
+
+@keyframes in {
+  from {
+    left: -20em;
+  }
+  to {
+    left: 0em;
+  }
+}
+
+@keyframes out {
+  from {
+    left: 0em;
+  }
+  to {
+    left: 25em;
+  }
+}
+
+@media (max-width: 1200px) {
+  .content .slide {
+    display: none;
+  }
+}
+@media (max-width: 1500px) {
+  .content {
+    width: 15em;
+  }
+  .slide img {
+    width: 15em;
+    height: 15em;
+  }
+}

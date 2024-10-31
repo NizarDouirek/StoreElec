@@ -1,0 +1,92 @@
+.card {
+    background-image: url("../../../assets/images/iphone.png");
+    background-color: #F8F9FA;
+    background-position: center;
+    background-size: 95% 95%;
+    background-repeat: no-repeat;
+    width: 220px;
+    height: 280px;
+    display: block;
+    margin: auto;
+    border: none;
+    cursor: pointer;
+    padding: 1em;
+    transition: background-size .3s ease;
+    overflow: hidden;
+    margin: 1em;
+    
+}
+.card .backgrandient {
+    background: linear-gradient(transparent 2%, transparent 7%, transparent 15%, transparent 50%, rgb(131, 131, 131));
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 7em;
+    background-size: cover;
+    margin-left: -1em;
+    transition: height .1s ease-in;
+}
+
+.card:hover .backgrandient{
+    height: 20em;
+}
+
+.card:hover {
+    background-size: 100% 100%;
+}
+
+.card .buttons button{
+    margin-inline: .1em;
+    width: 2.5em;
+    transition: width .1s ease;
+}
+
+.card .buttons {
+    position: relative;
+    top: 17em;
+    float: bottom;
+    transition: top .3s ease;
+}
+.card .buttons button:hover{
+    width: 4em;
+}
+.card:hover .buttons {
+    position: relative;
+    top: 10em;
+    float: bottom;
+}
+
+.title {
+    position: relative;
+    top: 13.8em;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    text-transform: uppercase;
+    transform: rotate(0);
+    left: 0;
+    transition: transform .2s ease, top .3s ease, left .2s ease-out;
+}
+
+.card:hover .title{
+    transform: rotate(90deg);
+    left: -5.7em;
+    top: 13em;
+}
+
+.price {
+    position: absolute;
+    right: 3px;
+    top: 3px;
+}
+
+.remise {
+    position: absolute;
+    right: 3px;
+    top: 2.7em;
+    font-size: .6em;
+}
+
+/* *{
+    display: block;
+    margin: auto;
+} */

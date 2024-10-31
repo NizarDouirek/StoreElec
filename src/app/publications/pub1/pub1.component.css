@@ -1,0 +1,73 @@
+.content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: fit-content;
+    align-items: center;
+    z-index: 0;
+}
+
+.cadre {
+    overflow: hidden;
+    width: fit-content;
+}
+
+.cadre .img1 {
+    position: relative;
+    /* top: -27em; */
+    top: 0;
+    animation: In1 .8s ease;
+}
+
+
+@keyframes In1 {
+    from {
+        top: -27em;
+    }
+
+    to {
+        right: 0;
+    }
+}
+
+.cadre .img2 {
+    position: relative;
+    /* top: -27em; */
+    left: 0;
+    animation: In2 .8s ease;
+}
+@keyframes In2 {
+    from {
+        left: -27em;
+    }
+
+    to {
+        left: 0;
+    }
+}
+
+.cadre .img3 {
+    position: relative;
+    /* top: -27em; */
+    right: 0;
+    animation: In3 .8s ease;
+}
+@keyframes In3 {
+    from {
+        right: -27em;
+    }
+
+    to {
+        right: 0;
+    }
+}
+
+@media (min-width: 800px) {
+    .cadre .img1 img{
+        width: 45em;
+    }
+
+    .cadre .img2 img, .cadre .img3 img {
+        width: 22em;
+    }
+}

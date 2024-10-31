@@ -1,0 +1,69 @@
+<div class="body">
+    <form #form="ngForm" class="d-block m-auto mt-5">
+        <h1 class="text-white text-center mb-3">Sing Up</h1>
+        <div class="form-group position-relative">
+            <input ngModel name="firstName" required id="firstName"
+                class="formControl" type="text">
+            <label for="firstName" class="labelControl">First Name</label>
+            <div class="after"></div>
+        </div>
+        <p class="alert alert-danger"
+            *ngIf="form.controls['firstName'].touched && form.controls['firstName'].invalid">
+            Please enter your first name
+        </p>
+        <div class="form-group position-relative">
+            <input ngModel name="lastName" required id="lastName"
+                class="formControl" type="text">
+            <label for="lastName" class="labelControl">Last Name</label>
+            <div class="after"></div>
+        </div>
+        <p class="alert alert-danger"
+            *ngIf="form.controls['lastName'].touched && form.controls['lastName'].invalid">
+            Please enter your last name
+        </p>
+        <div class="form-group position-relative">
+            <input ngModel name="email" email required id="email"
+                class="formControl" type="text">
+            <label for="email" class="labelControl">Email</label>
+            <div class="after"></div>
+        </div>
+        <p class="alert alert-danger"
+            *ngIf="form.controls['email'].touched && form.controls['email'].invalid">
+            Please enter your email
+        </p>
+        <div class="form-group position-relative">
+            <input #password ngModel name="password" required id="password"
+                class="formControl" [type]="showHide1">
+            <label for="password" class="labelControl">Password</label>
+            <button (click)="passwordToggle(1)" class="showHide">
+                <i *ngIf="showHide1 == 'password'" class="bi bi-eye"></i>
+                <i *ngIf="showHide1 == 'text'" class="bi bi-eye-slash"></i>
+            </button>
+            <div class="after"></div>
+        </div>
+        <div class="form-group position-relative">
+            <input #cpassowrd ngModel name="cPassword" required id="cPassword"
+                class="formControl" [type]="showHide2">
+            <label for="cPassword" class="labelControl">Confirm Passowrd</label>
+            <button (click)="passwordToggle(2)" class="showHide">
+                <i *ngIf="showHide2 == 'password'" class="bi bi-eye"></i>
+                <i *ngIf="showHide2 == 'text'" class="bi bi-eye-slash"></i>
+            </button>
+            <div class="after"></div>
+        </div>
+        <div class="buttons">
+            <button class="btn btn-success me-3">
+                <i class="bi bi-check2"></i>
+                Done
+            </button>
+            <button (click)="goBack()" type="button" class="btn btn-danger">
+                <i class="bi bi-x-lg"></i>
+                Cancel
+            </button>
+        </div>
+        <div class="mt-2">
+            <a (click)="iHaveAccount()" class="text-white">Do you have an
+                account?</a>
+        </div>
+    </form>
+</div>

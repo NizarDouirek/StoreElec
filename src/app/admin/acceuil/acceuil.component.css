@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.content {
+  min-width: 970px;
+}
+
+.welcome {
+  padding: 1em 2em;
+  font-size: 2em;
+  background-color: #add8e6a6;
+  font-family: oswald;
+  position: relative;
+  animation: welcome 0.2s ease;
+  z-index: 2;
+}
+
+.welcome span {
+  color: rgb(111, 156, 172);
+  font-weight: bold;
+}
+
+.welcome p {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 0.61em;
+}
+
+.statistics {
+  margin-top: 2em;
+  position: relative;
+  top: -20em;
+  animation: welcome 0.4s 0.2s ease;
+  z-index: 1;
+}
+
+.statisticsStart {
+  top: 0;
+}
+
+.statistics div {
+  box-shadow: 0 0 3px;
+  padding: 1em 2em;
+  border-radius: 5px;
+  text-align: center;
+  color: rgb(17, 66, 100);
+}
+
+h2 {
+  color: rgb(17, 66, 100);
+  font-family: oswald;
+  background-color: #add8e6a6;
+  width: fit-content;
+  padding: 0.3em 1em;
+  border-radius: 5px;
+  margin: auto;
+}
+
+.statistics div p {
+  font-family: Oswald;
+}
+
+.admins,
+h2 {
+  animation: admins 1.3s ease;
+}
+
+@keyframes admins {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes welcome {
+  from {
+    top: -10em;
+  }
+  to {
+    top: 0;
+  }
+}
+
+.list-group {
+  height: 17em;
+  overflow-y: scroll;
+}
+
+.list-group li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.afficher-user:nth-child(2) {
+  background-color: #add8e6a6;
+  color: rgb(17, 66, 100);
+  text-align: center;
+}
+
+.afficher-user img {
+  width: 18em;
+  height: 17em;
+}
+
+.afficher-user h1 {
+  text-align: center;
+  font-family: oswald;
+  min-width: 5em;
+}
+
+@media (max-width: 1200px) {
+  .row {
+    display: flex;
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,79 @@
+<div class="section1">
+    <div class=" d-block m-auto inSearch">
+        <div class="mt-5 d-block m-auto">
+            <form class="">
+                <input (focus)="resetView()" (keyup)="onSearchFinder(val.value)"
+                    #val placeholder="Search" class="form-control border
+                    border-primary" />
+            </form>
+        </div>
+        <div class="btnFinders container mt-1">
+            <button (click)="onBtnFinders('A')" class="btn btn-outline-primary
+                m-1">A</button>
+            <button (click)="onBtnFinders('B')" class="btn btn-outline-primary
+                m-1">B</button>
+            <button (click)="onBtnFinders('C')" class="btn btn-outline-primary
+                m-1">C</button>
+            <button (click)="onBtnFinders('D')" class="btn btn-outline-primary
+                m-1">D</button>
+            <button (click)="onBtnFinders('E')" class="btn btn-outline-primary
+                m-1">E</button>
+            <button (click)="onBtnFinders('F')" class="btn btn-outline-primary
+                m-1">F</button>
+            <button (click)="onBtnFinders('G')" class="btn btn-outline-primary
+                m-1">G</button>
+            <button (click)="onBtnFinders('H')" class="btn btn-outline-primary
+                m-1">H</button>
+            <button (click)="onBtnFinders('I')" class="btn btn-outline-primary
+                m-1">I</button>
+            <button (click)="onBtnFinders('J')" class="btn btn-outline-primary
+                m-1">J</button>
+            <button (click)="onBtnFinders('K')" class="btn btn-outline-primary
+                m-1">K</button>
+            <button (click)="onBtnFinders('L')" class="btn btn-outline-primary
+                m-1">L</button>
+            <button (click)="onBtnFinders('M')" class="btn btn-outline-primary
+                m-1">M</button>
+            <button (click)="onBtnFinders('N')" class="btn btn-outline-primary
+                m-1">N</button>
+            <button (click)="onBtnFinders('O')" class="btn btn-outline-primary
+                m-1">O</button>
+            <button (click)="onBtnFinders('P')" class="btn btn-outline-primary
+                m-1">P</button>
+            <button (click)="onBtnFinders('Q')" class="btn btn-outline-primary
+                m-1">Q</button>
+            <button (click)="onBtnFinders('R')" class="btn btn-outline-primary
+                m-1">R</button>
+            <button (click)="onBtnFinders('S')" class="btn btn-outline-primary
+                m-1">S</button>
+            <button (click)="onBtnFinders('T')" class="btn btn-outline-primary
+                m-1">T</button>
+            <button (click)="onBtnFinders('U')" class="btn btn-outline-primary
+                m-1">U</button>
+            <button (click)="onBtnFinders('V')" class="btn btn-outline-primary
+                m-1">V</button>
+            <button (click)="onBtnFinders('W')" class="btn btn-outline-primary
+                m-1">W</button>
+            <button (click)="onBtnFinders('X')" class="btn btn-outline-primary
+                m-1">X</button>
+            <button (click)="onBtnFinders('Y')" class="btn btn-outline-primary
+                m-1">Y</button>
+            <button (click)="onBtnFinders('Z')" class="btn btn-outline-primary
+                m-1">Z</button>
+            <button (click)="resetView()" class="btn btn-outline-primary m-1">
+                <i class="bi bi-arrow-clockwise"></i>
+            </button>
+        </div>
+    </div>
+</div>
+
+<div class="body">
+    <div *ngFor="let laptop of laptopsFiltred, let i= index">
+        <app-card1 [index]="i" [type]="laptop.type" [image]="laptop.img"
+            [price]="laptop.price" [title]="laptop.name"></app-card1>
+    </div>
+</div>
+
+<h1 align="center" style="font-family: roboto; margin-bottom: 3em;"
+    *ngIf="laptopsFiltred.length == 0"> Sorry this laptop is not exist</h1>
+<app-pub3></app-pub3>

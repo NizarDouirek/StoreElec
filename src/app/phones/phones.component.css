@@ -1,0 +1,56 @@
+.body {
+    display: flex;
+    width: 100vw;
+    flex-wrap: wrap;
+    padding: 5em 8em;
+    justify-content: center;
+    min-width: 1100px;
+}
+
+
+
+.btnFinders {
+    position: relative;
+    display: flex;
+    flex-wrap:wrap;
+    flex-direction: row;
+    justify-content: center;
+    width: 50em;
+}
+
+.inSearch {
+    width: 52em;
+
+}
+
+@media (max-width: 1200px) {
+    .btnFinders {
+        width: 37em;
+    }
+
+    .inSearch {
+        width: 40em;
+    }
+}
+
+@media (max-width: 900px) {
+    .section1 {
+        display: none;
+    }
+    .btnFinders {
+        background-color: red;
+    }
+}
+
+.titre {
+    font-size: 100px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background: linear-gradient(to right, #293ba0, #f76767);
+    margin-top: .2em;
+    margin-bottom: -.4em;
+}

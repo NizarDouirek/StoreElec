@@ -1,0 +1,149 @@
+.backImage {
+  background: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 5;
+  top: 0;
+  left: 0;
+}
+.panier {
+  width: 25em;
+  height: 100vh;
+  background-image: radial-gradient(white, rgba(196, 221, 229, 0.7));
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 5;
+  animation: panierIn 0.2s ease;
+  overflow-y: scroll;
+}
+
+@keyframes panierIn {
+  from {
+    right: -30em;
+  }
+
+  to {
+    right: 0;
+  }
+}
+
+.panierOut {
+  animation: panierOut 0.2s ease;
+}
+
+@keyframes panierOut {
+  from {
+    right: 0;
+  }
+
+  to {
+    right: -30em;
+  }
+}
+
+.panier img {
+  width: 4em;
+}
+
+.panier h4 {
+  font-size: 1em;
+}
+
+.panier ul {
+  width: 100%;
+  position: relative;
+  padding: 0;
+}
+
+.panier li:first-child {
+  padding: 0.5em;
+}
+
+.panier li:first-child .btn {
+  background-color: rgba(29, 29, 29, 0.534);
+  border: none;
+}
+.panier li:first-child .btn:hover {
+  background-color: rgba(17, 17, 17, 0.699);
+  border: none;
+}
+.panier li:first-child .btn:active {
+  background-color: rgba(0, 0, 0, 0.726);
+  border: none;
+}
+
+.panier li {
+  display: flex;
+  background: rgba(119, 119, 119, 0.493);
+  width: 100%;
+  padding: 1em;
+  padding-inline: 2em;
+  justify-items: center;
+  justify-content: space-between;
+  align-items: center;
+  border: 0.5px solid white;
+}
+
+.panier li:hover {
+  background: rgba(150, 150, 150, 0.493);
+}
+
+.panier li:not(:last-child) {
+  border-bottom: none;
+}
+
+p[class="text-white"] {
+  padding-inline: 0.3em;
+  font-weight: bold;
+  font-size: 1.5em;
+  margin-top: 0.5em;
+}
+
+.quantite {
+  display: flex;
+  align-items: center;
+}
+
+.quantite .btn {
+  /* background-color:rgba(192, 227, 253, 0.719); */
+  border: none;
+}
+.quantite .btn:hover {
+  background-color: rgba(174, 206, 233, 0.719);
+}
+.quantite .btn:active {
+  background-color: rgba(166, 195, 219, 0.719);
+}
+
+.buttons {
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.buttons button {
+  margin-block: 2px;
+}
+
+.buttons .btn:first-child {
+  background-color: rgba(53, 252, 152, 0.678);
+  border: none;
+}
+.buttons .btn:hover:first-child {
+  background-color: rgba(50, 231, 141, 0.678);
+}
+.buttons .btn:first-child:active {
+  background-color: rgba(46, 211, 128, 0.678);
+}
+
+.buttons .btn:last-child {
+  background-color: rgba(253, 100, 100, 0.774);
+  border: none;
+}
+.buttons .btn:last-child:hover {
+  background-color: rgba(236, 77, 77, 0.774);
+}
+.buttons .btn:last-child:active {
+  background-color: rgba(218, 73, 73, 0.774);
+}

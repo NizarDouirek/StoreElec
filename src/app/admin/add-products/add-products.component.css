@@ -1,0 +1,57 @@
+/* form {
+    width: 60%;
+}
+
+.form-group {
+    position: relative;
+    margin-block: 1.2em;
+}
+
+.formControl + label {
+    position: absolute;
+    bottom: .5em;
+    left: 1em;
+    font-family: oswald;
+    transition: bottom .2s ease, left .2s ease;
+}
+
+.formControl {
+    border: none;
+    width: 100%;
+    position: relative;
+    background-color: transparent;
+    padding: .5em 1em;
+    outline: none;
+}
+
+.afterControl {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: gray;    
+    transition: background-color .2s ease;
+}
+
+.formControl:focus + label {
+    bottom: 1.8em;
+    left: 0;
+}
+
+.formControl:focus ~ .afterControl {
+    background-color: lightblue;
+} */
+
+/* .form-group {
+    position: relative;
+} */
+
+/* .buttons {
+    position: relative;
+    right: 4em;
+    width: fit-content;
+    background-color: red;
+    float: right;
+    
+} */

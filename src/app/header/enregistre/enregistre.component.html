@@ -1,0 +1,10 @@
+<div [ngClass]="{'saveOut': disableSaveMode}" class="list-save">
+    <ul>
+        <li *ngFor="let item of enregistrementList; let i = index">
+            <span (click)="goToItem(item.title, item.type, item.index)"><i class="bi bi-save-fill me-4"></i>{{ item.title }}</span>
+            <div>
+                <i (click)="deleteItem(i)" class="bi bi-x-lg"></i>
+            </div>
+        </li>
+    </ul>
+</div>

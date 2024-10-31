@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+
+    </body>
+</html>
+<div class="content">
+
+    <div class="welcome">
+        Welcome <span>Mezrioui Hakim</span>
+        <p>I hope you are having a great day! </p>
+    </div>
+
+    <div [ngClass]="{statisticsStart: start}" class="statistics row w-75
+        m-auto mt-4">
+        <div class="col my-2 mx-3">
+            <h1>30K</h1>
+            <p>Users</p>
+        </div>
+        <div class="col my-2 mx-3">
+            <h1>150</h1>
+            <p>Admins</p>
+        </div>
+        <div class="col my-2 mx-3">
+            <h1>3k</h1>
+            <p>Products</p>
+        </div>
+        <div class="col my-2 mx-3">
+            <h1>100</h1>
+            <p>Vendeurs</p>
+        </div>
+        <div class="col my-2 mx-3">
+            <h1>50k</h1>
+            <p>Vents</p>
+        </div>
+        <div class="col my-2 mx-3">
+            <h1>10%</h1>
+            <p>Return</p>
+        </div>
+    </div>
+
+    <h2 class="mt-5 text-center">Admins</h2>
+    <div class="admins row
+        justify-content-center">
+        <div class="col-5 mt-5">
+            <ul class="list-group">
+
+                <li class="list-group-item active">
+                    <img width="100"
+                        src="../../../assets/images/users/user1.png"
+                        alt="user1">
+                    <p class="me-5">Oliver</p>
+                    <button class="btn btn-info text-white px-4 py-1 me-5">
+                        <i class="bi bi-pencil-square"></i>
+                        Edit
+                    </button>
+                </li>
+                <li class="list-group-item">
+                    <img width="100"
+                        src="../../../assets/images/users/user2.png"
+                        alt="user1">
+                    <p class="me-5">Elijah</p>
+                    <button class="btn btn-info text-white px-4 py-1 me-5">
+                        <i class="bi bi-pencil-square"></i>
+                        Edit
+                    </button>
+                </li>
+                <li class="list-group-item">
+                    <img width="100"
+                        src="../../../assets/images/users/user3.png"
+                        alt="user1">
+                    <p class="me-5">William</p>
+                    <button class="btn btn-info text-white px-4 py-1 me-5">
+                        <i class="bi bi-pencil-square"></i>
+                        Edit
+                    </button>
+                </li>
+                <li class="list-group-item">
+                    <img width="100"
+                        src="../../../assets/images/users/user4.png"
+                        alt="user1">
+                    <p class="me-5">Lucas</p>
+                    <button class="btn btn-info text-white px-4 py-1 me-5">
+                        <i class="bi bi-pencil-square"></i>
+                        Edit
+                    </button>
+                </li>
+                <li class="list-group-item">
+                    <img width="100"
+                        src="../../../assets/images/users/user5.png"
+                        alt="user1">
+                    <p class="me-5">James</p>
+                    <button class="btn btn-info text-white px-4 py-1 me-5">
+                        <i class="bi bi-pencil-square"></i>
+                        Edit
+                    </button>
+                </li>
+            </ul>
+        </div>
+        <div class="col-5 mt-5 ms-5 d-flex">
+            <div class="afficher-user">
+                <img src="../../../assets/images/users/user1.png"
+                    alt="Oliver"
+                    title="Olivier">
+            </div>
+            <div class="w-100 afficher-user">
+                <h1 class="mt-3">Oliver </h1>
+                <p class="px-3 mt-3">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Inventore a at sapiente sint harum corrupti, quidem tempore
+                    sed perspiciatis eligendi possimus atque.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="card col-3 mx-5 mt-5" [style]="{'width': '30%', 'border':
+            'none'}">
+            <h5>visitors</h5>
+            <p-chart type="doughnut" [data]="basicData"
+                [options]="basicOptions"></p-chart>
+        </div>
+
+        <div class="card col-5 mx-5 mt-5" [style]="{'width': '30%', 'border':
+            'none'}">
+            <h5>sales rate</h5>
+            <p-chart type="pie" [data]="data" [options]="basicOptions"></p-chart>
+        </div>
+    </div>
+</div>

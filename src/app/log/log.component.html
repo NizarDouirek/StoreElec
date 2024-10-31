@@ -1,0 +1,8 @@
+<!-- <div class="backImage"></div> -->
+<ng-container *ngIf="haveAccount">
+    <app-login (haveAccount)="haveAccount = $event"></app-login>
+</ng-container>
+
+<ng-container *ngIf="!haveAccount">
+    <app-register (haveAccount)="haveAccount = $event"></app-register>
+</ng-container>

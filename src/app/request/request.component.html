@@ -1,0 +1,46 @@
+<div [ngClass]="{'contentWidth': !isRequest}" class="content">
+    <div class="forForm">
+
+        <form requestForm="ngForm" *ngIf="isRequest">
+            <div class="form-group my-3">
+                <label class="d-flex badge bg-info" for="email">Email</label>
+                <input
+                    ngModel
+                    name="email"
+                    required
+                    placeholder="Enter Your Email"
+                    class="form-control"
+                    id="email"
+                    type="email">
+            </div>
+            <div class="form-group my-3">
+                <label class="d-flex badge bg-info" for="message">Message</label>
+                <textarea
+                    ngModel
+                    name="message"
+                    required
+                    placeholder="Write Your Message"
+                    class="form-control"
+                    name="message"
+                    id=""
+                    cols="20"
+                    rows="3">
+                </textarea>
+            </div>
+            <div class="form-group t-2">
+                <button class="btn btn-success"><i class="bi bi-send"></i> Send</button>
+                |
+                <button type="button" (click)="requestToggle()" class="btn
+                    btn-danger"><i class="bi bi-x-lg"></i> Cancel</button>
+            </div>
+        </form>
+    </div>
+
+
+    <div class="chat float-end me-3">
+        <button (click)="requestToggle()" class="chat btn btn-info">
+            <i *ngIf="!isRequest" class="bi bi-chat-fill text-white"></i>
+            <i *ngIf="isRequest" class="bi bi-x-lg text-white"></i>
+        </button>
+    </div>
+</div>

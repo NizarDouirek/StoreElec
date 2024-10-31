@@ -1,0 +1,176 @@
+
+.card {
+    height: 80vh;
+    overflow: hidden;
+    border: none;
+    width: fit-content;
+    display: block;
+    margin: auto;
+}
+
+.cardContent {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.photos {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1em;
+}
+
+.photos img {
+    width: 10em;
+    height: 8em;
+    margin-block: 1em;
+    cursor: pointer;
+    transform: scale(1);
+    opacity: 1;
+    transition: transform .2s ease, opacity .2s ease;
+}
+
+.photos img:hover {
+    opacity: .8;
+    transform: scale(1.1);
+}
+
+.imgView .image{
+    width: 50vw;
+}
+
+.desc {
+    border: 1px solid rgba(122, 122, 122, 0.534);
+    padding: 1em;
+    border-radius: .5em;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.479);
+    height: 100%;
+    width: 25em;
+    min-width: 25em;
+}
+
+.adc {
+    background-color: rgba(0, 0, 0, 0.452);
+    border: none;
+}
+.adc:hover {
+    background-color: rgba(0, 0, 0, 0.55);
+}
+.adc:active {
+    background-color: rgba(0, 0, 0, 0.65);
+}
+
+.save {
+    background-color: rgba(0, 128, 0, 0.384);
+    border: none;
+}
+.save:hover {
+    background-color: rgba(0, 128, 0, 0.432);
+}
+.save:active {
+    background-color: rgba(0, 128, 0, 0.534);
+}
+
+/* ----------------------------------------------------------------------------  */
+
+
+.caractiristique {
+    position: relative;
+    overflow: hidden;
+    margin-inline: 5em;
+    margin-top: 5em;
+}
+
+
+.title {
+    position: relative;
+    width: 100%;
+    left: 30%;
+    transform: skew(-30deg);
+    background-color: rgb(201, 201, 201);
+}
+
+.rightBar {
+    width: 1em;
+    height: 100%;
+    background-color: rgb(87, 87, 87);
+    position: absolute;
+    top: 0;
+    left: -1em;
+    z-index: -1;
+}
+
+.caractiristique h1{
+    padding: .5em 1em;
+    width: fit-content;
+    font-family: impact;
+    color: white;
+    position: relative;
+}
+
+table {
+    background-color: lightgray;
+    color: white;
+    text-align: center;
+    font-family: roboto;
+}
+
+table th{
+    font-family: impact;
+}
+
+table .h3 {
+    background-color: lightgray;
+}
+table tr:nth-child(even) {
+    background-color:rgb(87, 87, 87);
+}
+table tr:hover:nth-child(even) {
+    background-color:rgb(100, 100, 100);
+}
+table tr:nth-child(odd) {
+    background-color:lightgray;
+}
+table tr:hover:nth-child(odd) {
+    background-color:rgb(200, 200, 200);
+}
+
+table td {
+    padding-block: .4em;
+}
+
+table tr {
+    border-bottom: 1px solid gray;
+}
+
+@media (max-width: 1600px) {
+    .card {
+        height: fit-content;
+    }
+    .cardContent {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .photos {
+        flex-direction: row;
+        justify-content: center;
+        height: fit-content;
+    }
+    .imgView img{
+        width: 50vw;
+        min-width: 50em;
+        margin-block: 2em;
+    }
+    .desc {
+        width: 45em;
+    }
+    .caractiristique {
+        margin-inline: 0;
+    }
+    .table {
+        min-width: 1000px;
+    }
+}

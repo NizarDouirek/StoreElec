@@ -1,0 +1,38 @@
+
+<div (click)="DisablePanierMode()" class="backImage"></div>
+<div [ngClass]="{'panierOut': isPanierMode}" class="panier">
+    <ul>
+        <li>
+            <button (click)="DisablePanierMode()" class="btn text-white">
+                close
+                <i class="bi bi-box-arrow-right"></i>
+            </button>
+        </li>
+        <li *ngFor="let item of panierList; let i= index">
+            <span class="text-center">
+                <img (click)="goToShow(i)" [src]="item.image" alt=""
+                    width="100px">
+                <h4 class="text-white">{{ item.title }}</h4>
+            </span>
+            <span class="quantite">
+                <button (click)="changeQuantite(i, 1)" class="btn"><i class="bi
+                        bi-plus-circle-fill text-white"></i></button>
+                <p class="text-white">{{item.quantite}}</p>
+                <button (click)="changeQuantite(i, -1)" class="btn text-white"><i
+                        class="bi
+                        bi-dash-circle-fill"></i></button>
+            </span>
+            <span class="d-flex buttons">
+                <button (click)="DisablePanierMode()" routerLink="payer"
+                    class="btn btn-success">
+                    confirme
+                    <i class="bi bi-check2-circle"></i>
+                </button>
+                <button (click)="deleteItem(i)" class="btn btn-danger">
+                    delete
+                    <i class="bi bi-trash-fill"></i>
+                </button>
+            </span>
+        </li>
+    </ul>
+</div>

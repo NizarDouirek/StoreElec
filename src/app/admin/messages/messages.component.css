@@ -1,0 +1,102 @@
+.list-group li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+h1 {
+  font-family: oswald;
+  color: rgb(17, 66, 100);
+  text-align: center;
+  background-color: #c9e5ef;
+  padding: 1.2em;
+  position: relative;
+  animation: welcome 0.2s ease;
+}
+.messages .list-group {
+  background-color: rgb(238, 238, 238);
+  padding: 1em;
+}
+
+.list-group {
+  height: 21em;
+  overflow-y: scroll;
+  margin-top: 5em;
+}
+
+.list-group li:hover {
+  opacity: 0.8;
+}
+
+.messages .list-group li:nth-child(even) {
+  position: relative;
+  right: -40%;
+  background-color: #0d6efd;
+  color: white;
+}
+
+.messages .list-group li {
+  max-width: 55%;
+  border-radius: 5px;
+  margin-block: 0.5em;
+  width: fit-content;
+}
+
+.form-group {
+  display: flex;
+}
+
+.form-group button[class*="default"] {
+  transform: scale(1.5);
+  outline: none;
+  border: none;
+}
+
+.row {
+  animation: messages 0.8s ease;
+  justify-content: center;
+}
+
+@keyframes welcome {
+  from {
+    top: -10em;
+  }
+  to {
+    top: 0;
+  }
+}
+
+@keyframes messages {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 1500px) {
+  .row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  div[class^="col"] {
+    min-width: 40em;
+  }
+}
+
+@media (max-width: 1100px) {
+  .row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+  }
+
+  h1 {
+    width: 100vw;
+  }
+}

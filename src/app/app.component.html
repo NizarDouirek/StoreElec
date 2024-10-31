@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+
+
+        <!-- <app-product></app-product> -->
+        <!-- <app-product-pc></app-product-pc> -->
+
+        <!-- <app-left-section></app-left-section> -->
+        <!-- <app-pub1></app-pub1> -->
+        <!-- <app-pub2></app-pub2> -->
+        <!-- <app-pub3></app-pub3> -->
+        <!-- <app-home></app-home> -->
+
+        <!-- <app-card1></app-card1> -->
+        <!-- <app-request></app-request> -->
+
+
+        <!-- <app-log></app-log> -->
+
+        <!-- <app-search></app-search> -->
+        <!-- <app-not-found></app-not-found> -->
+
+        <!-- <app-payer></app-payer> -->
+
+
+        <ng-container *ngIf="!isNotFound && !isLogPage && !isPayerPage &&
+            !isAdminPage">
+            <app-header></app-header>
+        </ng-container>
+
+        <router-outlet></router-outlet>
+
+        <ng-container *ngIf="!isNotFound && !isLogPage && !isPayerPage &&
+            !isAdminPage">
+            <app-footer></app-footer>
+        </ng-container>
+        <ng-container *ngIf="!isNotFound && !isLogPage && !isPayerPage &&
+            !isAdminPage">
+            <app-request></app-request>
+        </ng-container>
+        <div *ngIf="!isNotFound && !isLogPage && !isPayerPage && isTop &&
+            !isAdminPage">
+            <button (click)="scroll()"
+                class="btn
+                btn-warning">
+                <i class="bi bi-arrow-up-circle-fill text-white"></i>
+            </button>
+        </div>
+        <!-- <app-admin></app-admin> -->
+    </body>
+</html>

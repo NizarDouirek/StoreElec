@@ -1,0 +1,164 @@
+<div class="body">
+    <div class="card ">
+        <div class="cardContent p-4">
+            <div class="photos">
+                <div class="my-1 image">
+                    <img #img1 (click)="changeImage(img1.src)"
+                        src="../../../assets/images/mypc1.png" alt="">
+                </div>
+                <div class="my-1 image">
+                    <img #img2 (click)="changeImage(img2.src)"
+                        src="../../../assets/images/mypc3.png"
+                        alt="">
+                </div>
+                <div class="my-1 image">
+                    <img #img3 (click)="changeImage(img3.src)"
+                        src="../../../assets/images/mypc4.png"
+                        alt="">
+                </div>
+                <div class="my-1 image">
+                    <img #img4 (click)="changeImage(img4.src)"
+                        src="../../../assets/images/mypc5.png"
+                        alt="">
+                </div>
+            </div>
+            <div class="imgView mx-3">
+                <img [src]="pathImage"
+                    alt="">
+            </div>
+            <div class="desc">
+                <div class="d-flex flex-column justify-content-center">
+                    <h1 class="my-5">lenovo v-130 15-ikb</h1>
+                    <p class="mb-5">Lorem ipsum dolor sit amet consectetur
+                        adipisicing
+                        elit.
+                        Quae repellendus laboriosam provident consequuntur ipsam
+                        error
+                        eos rerum, veniam culpa maiores id fugiat voluptates
+                        itaque
+                        expedita voluptatibus laudantium deserunt dignissimos
+                        architecto!
+                    </p>
+                    <div class="d-flex align-items-center mb-5">
+                        <h3 class="text-success mx-3">
+                            450$
+                        </h3>
+                        <del class="badge bg-danger" for="">650$</del>
+                    </div>
+                </div>
+                <div>
+                    <button (click)="addToPanier()" class="adc btn text-white
+                        me-3">
+                        <i class="bi bi-cart4 me-2"></i>
+                        add to cart
+                    </button>
+                    <button (click)="addToSave()" class="save btn text-white
+                        px-3">
+                        <i class="bi bi-bookmark-fill me-2"></i>
+                        save
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <app-pub3></app-pub3>
+
+
+    <div class="caractiristique">
+        <div class="title">
+            <h1 class="m-0 py-2">Characteristics Techniques LENOVO V130-15IKB</h1>
+            <div class="rightBar"></div>
+        </div>
+        <table class="table">
+            <tr>
+                <th class="h3" rowspan="4">general information</th>
+                <td>Designation</td>
+                <td>LENOVO V130-15IKB (81HN00FCFR)</td>
+            </tr>
+            <tr>
+                <td>Brand</td>
+                <td>LENOVO</td>
+            </tr>
+            <tr>
+                <td>Model</td>
+                <td>LENOVO V130-15IKB (81HN00FCFR)</td>
+            </tr>
+            <tr>
+                <td>Range</td>
+                <td>Lenovo</td>
+            </tr>
+            <tr>
+                <th class="h3" rowspan="4">Operating system</th>
+                <td> Operating system </td>
+                <td>Windows 10 Famille 64 bits </td>
+            </tr>
+            <tr>
+                <td>OS family</td>
+                <td>Microsoft Windows 10 </td>
+            </tr>
+            <tr>
+                <td>OS language</td>
+                <td>French</td>
+            </tr>
+            <tr>
+                <td>Operating system provided</td>
+                <td>Oui</td>
+            </tr>
+            <tr>
+                <th class="h3" rowspan="6">Processor and chipset</th>
+                <td> processor brand </td>
+                <td> Intel </td>
+            </tr>
+            <tr>
+                <td>Processor</td>
+                <td> Intel Core i3 </td>
+            </tr>
+            <tr>
+                <td>Platform (proc.)</td>
+                <td>Intel Kaby Lake</td>
+            </tr>
+            <tr>
+                <td>CPU type</td>
+                <td> Intel Core i3-7020U (Dual-Core 2.3 GHz - Cache 3 Mo) </td>
+            </tr>
+            <tr>
+                <td>CPU frequency</td>
+                <td> 2.30 GHz</td>
+            </tr>
+            <tr>
+                <td>Coer name</td>
+                <td> 2 </td>
+            </tr>
+            <tr>
+                <th class="h3" rowspan="5">Memory</th>
+                <td> Memory size </td>
+                <td> 4 Go </td>
+            </tr>
+            <tr>
+                <td>Number of strips</td>
+                <td> 1 </td>
+            </tr>
+            <tr>
+                <td>Memory Type</td>
+                <td>DDR4</td>
+            </tr>
+            <tr>
+                <td>Memory frequency(s).</td>
+                <td> DDR4 2133 MHz </td>
+            </tr>
+            <tr>
+                <td>Max memory size</td>
+                <td> 12 Go</td>
+            </tr>
+            <tr>
+                <th class="h3" rowspan="5">Graphics</th>
+                <td> Graphic chipset </td>
+                <td>Intel HD Graphics 620 </td>
+            </tr>
+        </table>
+    </div>
+
+
+    <app-card3></app-card3>
+</div>
